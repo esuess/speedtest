@@ -1,7 +1,7 @@
 ---
 title: "speedtest"
 author: "Prof. Eric A. Suess"
-
+date: "09/06/2025"
 ---
 
 ## Quarto
