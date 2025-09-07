@@ -8,10 +8,14 @@ date: "09/06/2025"
 
 Conduct three internet speed tests, collect the results in a pandas DataFrame, and generate a histogram of the download times.
 
+Run the code in the next cell to install the necessary packages and run the speed tests.
+
 ```{python}
 #| eval: false
 !pip install speedtest-cli pandas matplotlib
 ```
+
+Now 
 
 ```{python}
 import speedtest
