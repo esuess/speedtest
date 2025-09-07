@@ -15,7 +15,7 @@ Run the code in the next cell to install the necessary packages and run the spee
 !pip install speedtest-cli pandas matplotlib
 ```
 
-Now 
+Now run the code in the next cell to perform the speed tests and generate the histogram.
 
 ```{python}
 import speedtest
