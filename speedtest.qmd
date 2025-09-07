@@ -4,7 +4,7 @@ author: "Prof. Eric A. Suess"
 date: "09/06/2025"
 ---
 
-## Quarto
+## Speedtest
 
 Conduct three internet speed tests, collect the results in a pandas DataFrame, and generate a histogram of the download times.
 
