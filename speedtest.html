@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Prof.&nbsp;Eric A. Suess">
+<meta name="dcterms.date" content="2025-09-06">
 
 <title>speedtest</title>
 <style>
@@ -86,7 +88,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prof.&nbsp;Eric A. Suess </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 6, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -98,11 +112,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="quarto" class="level2">
 <h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<div id="216d0560" class="cell" data-execution_count="1">
+<div id="8a48f656" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install speedtest<span class="op">-</span>cli pandas matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-<div id="2e5cb17f" class="cell" data-execution_count="2">
+<div id="75fe9575" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> speedtest</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -159,24 +173,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Running speedtest #1...
-Result: ping = 9.823ms, download = 121.5Mbps, upload = 94.5Mbps
+Result: ping = 13.524ms, download = 115.2Mbps, upload = 87.9Mbps
 Running speedtest #2...
-Result: ping = 10.409ms, download = 118.0Mbps, upload = 91.9Mbps
+Result: ping = 9.964ms, download = 138.1Mbps, upload = 90.4Mbps
 Running speedtest #3...
-Result: ping = 9.799ms, download = 136.5Mbps, upload = 89.7Mbps
+Result: ping = 11.398ms, download = 130.8Mbps, upload = 98.8Mbps
 
 Collected speedtest results:
      ping    download     upload
-0   9.823  121.460734  94.518188
-1  10.409  118.040534  91.942730
-2   9.799  136.460638  89.658527
+0  13.524  115.239811  87.891777
+1   9.964  138.055390  90.417692
+2  11.398  130.770392  98.794992
 
 Generating histogram of download times...</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="speedtest_files/figure-html/cell-3-output-2.png" width="821" height="523" class="figure-img"></p>
+<p><img src="speedtest_files/figure-html/cell-3-output-2.png" width="812" height="523" class="figure-img"></p>
 </figure>
 </div>
 </div>
