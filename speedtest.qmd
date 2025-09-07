@@ -1,0 +1,70 @@
+---
+title: "speedtest"
+name: "Prof. Eric A. Suess"
+---
+
+## Quarto
+
+```{python}
+#| eval: false
+!pip install speedtest-cli pandas matplotlib
+```
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{python}
+import speedtest
+import pandas as pd
+import matplotlib.pyplot as plt
+import time
+
+# Initialize speedtest
+st = speedtest.Speedtest()
+
+results = []
+
+for i in range(3):
+    print(f"Running speedtest #{i+1}...")
+    
+    # Get best server
+    st.get_best_server()
+
+    # Perform speedtest
+    st.download()
+    st.upload()
+
+    # Get results
+    results_dict = st.results.dict()
+
+    result = {
+        'ping': results_dict['ping'],
+        'download': results_dict['download'] / 1_000_000,  # Convert to Mbps
+        'upload': results_dict['upload'] / 1_000_000       # Convert to Mbps
+    }
+    
+    results.append(result)
+    print(f"Result: ping = {result['ping']}ms, download = {result['download']:.1f}Mbps, upload = {result['upload']:.1f}Mbps")
+    
+    if i < 2:
+        time.sleep(10)
+
+# Convert results to pandas DataFrame
+df = pd.DataFrame(results)
+
+print("\nCollected speedtest results:")
+print(df)
+
+# Generate histogram of download times
+print("\nGenerating histogram of download times...")
+plt.figure(figsize=(10, 6))
+plt.hist(df['download'], bins=5, edgecolor='black', alpha=0.7, color='skyblue')
+
+# Add titles and labels for clarity
+plt.title('Distribution of Download Speeds')
+plt.xlabel('Download Speed (Mbps)')
+plt.ylabel('Frequency')
+plt.grid(axis='y', alpha=0.75)
+
+# Display the plot
+plt.show()
+```
