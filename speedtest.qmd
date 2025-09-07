@@ -6,12 +6,12 @@ date: "09/06/2025"
 
 ## Quarto
 
+Conduct three internet speed tests, collect the results in a pandas DataFrame, and generate a histogram of the download times.
+
 ```{python}
 #| eval: false
 !pip install speedtest-cli pandas matplotlib
 ```
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
 ```{python}
 import speedtest
