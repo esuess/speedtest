@@ -112,11 +112,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="quarto" class="level2">
 <h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<div id="bf84752e" class="cell" data-execution_count="1">
+<p>Conduct three internet speed tests, collect the results in a pandas DataFrame, and generate a histogram of the download times.</p>
+<p>Run the code in the next cell to install the necessary packages and run the speed tests.</p>
+<div id="ddf0765f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install speedtest<span class="op">-</span>cli pandas matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-<div id="3e8625ea" class="cell" data-execution_count="2">
+<p>Now</p>
+<div id="9248e86a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> speedtest</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -173,24 +175,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Running speedtest #1...
-Result: ping = 11.889ms, download = 118.6Mbps, upload = 89.3Mbps
+Result: ping = 14.607ms, download = 114.0Mbps, upload = 88.0Mbps
 Running speedtest #2...
-Result: ping = 10.11ms, download = 119.1Mbps, upload = 90.1Mbps
+Result: ping = 9.816ms, download = 98.6Mbps, upload = 99.6Mbps
 Running speedtest #3...
-Result: ping = 10.441ms, download = 116.5Mbps, upload = 87.5Mbps
+Result: ping = 10.973ms, download = 112.8Mbps, upload = 92.8Mbps
 
 Collected speedtest results:
      ping    download     upload
-0  11.889  118.554382  89.312575
-1  10.110  119.069234  90.082418
-2  10.441  116.519409  87.543459
+0  14.607  114.008763  88.042721
+1   9.816   98.582013  99.630195
+2  10.973  112.785779  92.769736
 
 Generating histogram of download times...</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="speedtest_files/figure-html/cell-3-output-2.png" width="812" height="523" class="figure-img"></p>
+<p><img src="speedtest_files/figure-html/cell-3-output-2.png" width="821" height="523" class="figure-img"></p>
 </figure>
 </div>
 </div>
